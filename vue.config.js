@@ -7,7 +7,7 @@ module.exports = {
               ws: true,
               changeOrigin: true,
               pathRewrite: {
-                '^/api': '/public'
+                '^/api': '/public/mock'
                 } 
             }
           }
