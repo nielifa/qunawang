@@ -17,7 +17,7 @@
                   </p>
                   <p class="desc-price">
                       <span class="strong">11</span>
-                      <span class="strong-color">元</span>
+                      <span class="strong-color">津巴布韦元</span>
                       <span class="strong-sell">已售77230</span>
                   </p>
               </div>

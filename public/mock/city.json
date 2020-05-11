@@ -312,6 +312,57 @@
                 "spell":"beijing",
                 "name":"北京"
             }],
+            "R":[{
+                "id":58,
+                "spell":"beijing",
+                "name":"北京"
+            },{
+                "id":59,
+                "spell":"beijing",
+                "name":"北京"
+            },{
+                "id":60,
+                "spell":"beijing",
+                "name":"北京"
+            },{
+                "id":61,
+                "spell":"beijing",
+                "name":"北京"
+            }],
+            "S":[{
+                "id":58,
+                "spell":"beijing",
+                "name":"北京"
+            },{
+                "id":59,
+                "spell":"beijing",
+                "name":"北京"
+            },{
+                "id":60,
+                "spell":"beijing",
+                "name":"北京"
+            },{
+                "id":61,
+                "spell":"beijing",
+                "name":"北京"
+            }],
+            "T":[{
+                "id":58,
+                "spell":"beijing",
+                "name":"北京"
+            },{
+                "id":59,
+                "spell":"beijing",
+                "name":"北京"
+            },{
+                "id":60,
+                "spell":"beijing",
+                "name":"北京"
+            },{
+                "id":61,
+                "spell":"beijing",
+                "name":"北京"
+            }],
             "U":[{
                 "id":58,
                 "spell":"beijing",
