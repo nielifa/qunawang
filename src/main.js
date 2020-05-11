@@ -9,8 +9,10 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 fastClick.attach(document.body)
 Vue.config.productionTip = false
 import router from './router'
+import store from './store'
 Vue.use(VueAwesomeSwiper)
 new Vue({
   render: h => h(App), 
-  router
+  router,
+  store
 }).$mount('#app')

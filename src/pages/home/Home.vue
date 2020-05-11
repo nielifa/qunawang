@@ -1,6 +1,6 @@
 <template>
     <div>
-       <Header :city="city"/>
+       <Header/>
        <Swiper :swiperList="swiperList"/>
        <Icons :iconList="iconList"/>
        <Recommond :recommondList="recommondList"/>
@@ -26,7 +26,6 @@ import axios from 'axios'
         },
         data(){
             return {
-                city:"",
                 swiperList:[],
                 iconList:[],
                 recommondList:[],

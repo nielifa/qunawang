@@ -5,22 +5,23 @@
        </div>
        <div class="header-input"><i class="iconfont">&#xe632;</i>输入搜索目的地</div>
           <div class="header-right" @click="tiaozhuan">
-              {{city}}
+              {{this.city}}
               <i class="iconfont arrow-icon">&#xe6e5;</i>
           </div>
     </div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
     export default {
         name:"HomeHeader",
-        props:{
-            city:String
-        },
         methods:{
             tiaozhuan(){
                 this.$router.push("/city")
             }
+        },
+        computed:{
+            ...mapState(['city'])
         }
     }
 </script>
@@ -43,7 +44,7 @@
     font-size:0.4rem
 }
 .header-right{
-    width:1.24rem
+    min-width:1.04rem
     float:right  
     text-align:center
     color:#fff

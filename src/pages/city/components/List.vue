@@ -7,11 +7,12 @@
            </div>
            <div class="button-list">
                <div class="button-wrapper">
-                  <div class="button">北京</div>
+                  <div class="button">{{this.currentCity}}</div>
                </div>
            </div>
        </div>
        <div class="area">
+           <!-- 热门城市start -->
            <div class="title border-topbottom">
                热门城市
            </div>
@@ -19,27 +20,32 @@
                <div class="button-wrapper"
                 v-for="(item,key) in hot"
                 :key="key"
+                @click="handleCityClick(item.name)"
                 >
                   <div class="button">{{item.name}}</div>
                </div>
            </div>
+           <!-- 热门城市end -->
        </div>
+       <!-- 城市列表start -->
        <div class="area" v-for="(item,key) in cities" :key="key" :ref="key">
            <div class="title border-topbottom">
                {{key}}
            </div>
            <div class="item-list">
-               <div class="item border-bottom" v-for="innerItem in item" :key="innerItem.id">
+               <div class="item border-bottom" v-for="innerItem in item" :key="innerItem.id" @click="handleCityClick(innerItem.name)">
                    {{innerItem.name}}
                </div>
            </div>   
        </div>
+       <!-- 城市列表end -->
        </div>
     </div>
 </template>
 
 <script>
 import Bscroll from 'better-scroll'
+import {mapState,mapMutations} from "vuex"
     export default {
         name:"CityHeader",
         props:{
@@ -50,6 +56,13 @@ import Bscroll from 'better-scroll'
         mounted(){
             this.scroll=new Bscroll(this.$refs.wrapper)
         },
+        methods:{
+          handleCityClick(city){
+              this.changeCity(city)
+              this.$router.push('/')
+          },
+          ...mapMutations(['changeCity'])
+        },
         watch:{
             letter(){
                 if(this.letter){
@@ -57,6 +70,11 @@ import Bscroll from 'better-scroll'
                     this.scroll.scrollToElement(element,200)
                 }
             }
+        },
+        computed:{
+            ...mapState({
+                currentCity:'city'
+            })
         }
     }
 </script>
