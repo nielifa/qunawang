@@ -4,7 +4,8 @@
           <div class="title public">
               猜你喜欢
           </div>
-          <div v-for="(item,index) in recommondList" :key="index" class="main public">
+          <ul>
+          <router-link tag="li" :to="'/detail/'+item.id" v-for="(item,index) in recommondList" :key="index" class="main public">
               <div class="left">
                   <img class="img-pic" :src="item.imgUrl" alt="">
               </div>
@@ -21,7 +22,8 @@
                       <span class="strong-sell">已售77230</span>
                   </p>
               </div>
-          </div>
+          </router-link>
+          </ul>
        </div>
     </div>
 </template>
